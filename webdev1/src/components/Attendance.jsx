@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../styles/attendance.css";
 
+const BACKEND_URL = 'https://schedutrack-bfee19493e8e.herokuapp.com'; 
+
 function Attendance() {
   const [attendanceData, setAttendanceData] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState(null);
@@ -14,7 +16,7 @@ function Attendance() {
 
   const fetchAttendance = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/attendance", {
+      const response = await fetch(`${BACKEND_URL}/api/attendance`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",

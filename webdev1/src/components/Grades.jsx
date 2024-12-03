@@ -3,6 +3,9 @@ import '../styles/grades.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const BACKEND_URL = 'https://schedutrack-bfee19493e8e.herokuapp.com'; 
+
+
 function Grades() {
     const [sgpa, setSgpa] = useState("SGPA");
     const [cgpa, setCgpa] = useState("CGPA");
@@ -28,7 +31,7 @@ function Grades() {
 
     const fetchGrades = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/grades', {
+            const response = await fetch(`${BACKEND_URL}/api/grades`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
                     'Content-Type': 'application/json',

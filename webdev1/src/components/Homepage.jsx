@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/homepage.css';
 
+const BACKEND_URL = 'https://schedutrack-bfee19493e8e.herokuapp.com'; 
+
+
 function Homepage() {
     const [courses, setCourses] = useState([]);
     const [error, setError] = useState('');
@@ -13,7 +16,7 @@ function Homepage() {
                 const token = localStorage.getItem('token');
                 console.log("Token from localStorage:", token);
 
-                const response = await fetch('http://localhost:5000/api/courses', {
+                const response = await fetch(`${BACKEND_URL}/api/courses`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json',

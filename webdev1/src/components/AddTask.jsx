@@ -5,6 +5,9 @@ import '../styles/add_task.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const BACKEND_URL = 'https://schedutrack-bfee19493e8e.herokuapp.com'; 
+
+
 function AddTask({ addTask }) {
   const [taskName, setTaskName] = useState('');
   const [dueDate, setDueDate] = useState(null);
@@ -16,7 +19,7 @@ function AddTask({ addTask }) {
     const fetchCourses = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:5000/api/courses', {
+        const response = await fetch(`${BACKEND_URL}/api/courses`, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'

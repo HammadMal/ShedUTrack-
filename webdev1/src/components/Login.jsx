@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/login.css';
+const BACKEND_URL = 'https://schedutrack-bfee19493e8e.herokuapp.com'; 
+
 
 function Login({ onLogin }) {
   const [errorMessage, setErrorMessage] = useState('');
@@ -11,7 +13,7 @@ function Login({ onLogin }) {
     const password = document.getElementById('password').value;
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch(`${BACKEND_URL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

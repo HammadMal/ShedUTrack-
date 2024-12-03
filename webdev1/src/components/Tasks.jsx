@@ -4,6 +4,9 @@ import '../styles/task.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const BACKEND_URL = 'https://schedutrack-bfee19493e8e.herokuapp.com'; 
+
+
 function Tasks() {
     const [courses, setCourses] = useState([]);
     const [tasks, setTasks] = useState([]);
@@ -19,7 +22,7 @@ function Tasks() {
             console.log("Fetching courses and tasks...");
             try {
                 // Fetch courses
-                const responseCourses = await fetch('http://localhost:5000/api/courses', {
+                const responseCourses = await fetch(`${BACKEND_URL}/api/courses`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                         'Content-Type': 'application/json',

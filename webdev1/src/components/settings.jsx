@@ -4,6 +4,9 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
+const BACKEND_URL = 'https://schedutrack-bfee19493e8e.herokuapp.com'; 
+
+
 function Settings() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -13,7 +16,7 @@ function Settings() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/settings/user', {
+        const response = await fetch(`${BACKEND_URL}/api/settings/user`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
