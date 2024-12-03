@@ -14,7 +14,7 @@ const settingsRoute = require('./routes/settings');
 const app = express();
 
 app.use(cors({
-    origin: 'https://your-vercel-domain.vercel.app', // Replace with your actual Vercel frontend domain
+    origin: 'https://sched-u-track-web-and-app-dev.vercel.app', // Replace with your actual Vercel frontend domain
     methods: ['GET', 'POST', 'DELETE'],
 }));
 
