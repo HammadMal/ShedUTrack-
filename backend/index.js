@@ -13,7 +13,12 @@ const settingsRoute = require('./routes/settings');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://your-vercel-domain.vercel.app', // Replace with your actual Vercel frontend domain
+    methods: ['GET', 'POST', 'DELETE'],
+}));
+
+
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI, {

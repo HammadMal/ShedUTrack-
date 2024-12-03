@@ -18,6 +18,8 @@ function Tasks() {
     const selectedCourse = location.state?.selectedCourse;
 
     useEffect(() => {
+        console.log("Token from localStorage:", localStorage.getItem('token'));
+
         const fetchCoursesAndTasks = async () => {
             console.log("Fetching courses and tasks...");
             try {
