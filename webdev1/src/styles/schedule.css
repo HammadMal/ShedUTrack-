@@ -1,0 +1,145 @@
+/* Main schedule container */
+.schedule-content {
+    font-family: Arial, sans-serif;
+    padding: 110px;
+    background-color: #f8f9fa;
+    color: #333;
+    margin-top: 300px;
+  }
+  
+  /* Timetable grid */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100px repeat(5, 1fr);
+    gap: 1px;
+    background-color: #ddd;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .grid-item {
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  /* Invisible header for the first grid cell */
+  .invisible {
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* Course block */
+  .course-block {
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  /* Attendance colors */
+  .course-block.green {
+    background-color: #28a745; /* Green for >=95% attendance */
+    width: 200px;
+  }
+  
+  .course-block.yellow {
+    background-color: #ffc107; /* Yellow for >=85% attendance */
+    width: 200px;
+  }
+  
+  .course-block.red {
+    background-color: #dc3545; /* Red for >=75% attendance */
+    width: 200px;
+  }
+  
+  .course-block.gray {
+    background-color: #6c757d; /* Gray for <75% attendance */
+    width: 200px;
+  }
+  
+  /* Buttons */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #6f42c1;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #563d7c;
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+  
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 80px repeat(4, 1fr); /* Adjust grid for smaller screens */
+    }
+
+    .grid-item {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .course-block {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .button-container {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* For mobile phones (up to 767px) */
+@media (max-width: 767px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* Stack grid items in one column for mobile */
+  }
+
+  .grid-item {
+      font-size: 0.8rem; /* Smaller font for readability on smaller screens */
+      padding: 6px;
+  }
+
+  .course-block {
+      font-size: 0.75rem;
+      padding: 6px;
+      text-align: center;
+  }
+
+  .button-container {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 6px;
+  }
+
+  .button {
+      padding: 8px 10px;
+      font-size: 0.85rem;
+  }
+}
