@@ -40,7 +40,7 @@ function Login({ onLogin }) {
   return (
     <div className="login-page">
       <div className="logo-container">
-        <img src="public/logo.png" alt="SchedUTrack Logo" className="login-logo" />
+        <img src="/logo.png" alt="SchedUTrack Logo" className="login-logo" />
       </div>
 
       <div className="login-container">
