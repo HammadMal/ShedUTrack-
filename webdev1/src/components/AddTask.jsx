@@ -55,7 +55,7 @@ function AddTask({ addTask }) {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/add-task', {
+      const response = await fetch(`${BACKEND_URL}/api/add-task`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
