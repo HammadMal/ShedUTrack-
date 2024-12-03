@@ -35,7 +35,7 @@ function Tasks() {
                 setCourses(coursesData);
 
                 // Fetch tasks
-                const responseTasks = await fetch('http://localhost:5000/api/tasks', {
+                const responseTasks = await fetch(`${BACKEND_URL}/api/tasks`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                         'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ function Tasks() {
         try {
             const taskId = selectedTask._id;
 
-            const response = await fetch(`http://localhost:5000/api/tasks/${taskId}`, {
+            const response = await fetch(`${BACKEND_URL}/api/tasks/${taskId}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
