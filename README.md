@@ -1,4 +1,4 @@
-# 📅 SchedUTrack
+# 📅 ShedUTrack
 
 SchedUTrack is a comprehensive web-based platform designed to help university students manage their academic activities efficiently. It provides tools for attendance tracking, timetable management, grade monitoring, and progress tracking.
 
