@@ -3,7 +3,7 @@ import '../styles/grades.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const BACKEND_URL = 'https://schedutrack-bfee19493e8e.herokuapp.com'; 
+const BACKEND_URL = 'https://schedutrack-backend.onrender.com'; 
 
 
 function Grades() {

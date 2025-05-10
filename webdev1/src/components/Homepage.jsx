@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/homepage.css';
 
-const BACKEND_URL = 'https://schedutrack-bfee19493e8e.herokuapp.com'; 
+const BACKEND_URL = 'https://schedutrack-backend.onrender.com'; 
 
 
 function Homepage() {
