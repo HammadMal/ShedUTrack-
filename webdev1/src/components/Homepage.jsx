@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/homepage.css';
 
-const BACKEND_URL = 'https://schedutrack-backend.onrender.com'; 
+const BACKEND_URL = 'https://sched-u-track-backend.fly.dev'; 
 
 
 function Homepage() {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/login.css';
-const BACKEND_URL = 'https://schedutrack-backend.onrender.com'; 
+const BACKEND_URL = 'https://sched-u-track-backend.fly.dev'; 
 
 
 function Login({ onLogin }) {

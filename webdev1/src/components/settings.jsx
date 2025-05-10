@@ -4,7 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
-const BACKEND_URL = 'https://schedutrack-backend.onrender.com'; 
+const BACKEND_URL = 'https://sched-u-track-backend.fly.dev'; 
 
 
 function Settings() {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/attendance.css";
 
-const BACKEND_URL = 'https://schedutrack-backend.onrender.com'; 
+const BACKEND_URL = 'https://sched-u-track-backend.fly.dev'; 
 
 function Attendance() {
   const [attendanceData, setAttendanceData] = useState([]);
