@@ -1,0 +1,27 @@
+name: Keep App Warm
+
+on:
+  schedule:
+    - cron: '*/3 * * * *'  # Run every 3 minutes
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping application
+        run: |
+          # Add a more thorough check with output
+          RESPONSE=$(curl -s https://sched-u-track-backend.fly.dev/)
+          echo "Response received: $RESPONSE"
+          
+          # Check HTTP status code
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://sched-u-track-backend.fly.dev/)
+          echo "HTTP status code: $STATUS"
+          
+          if [[ "$STATUS" == "200" ]]; then
+            echo "Application is responding correctly!"
+          else
+            echo "Warning: Application returned non-200 status code"
+            exit 1
+          fi
